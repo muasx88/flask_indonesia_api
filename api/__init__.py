@@ -1,7 +1,7 @@
 
 from flask import Flask, make_response
 
-from . import config, models
+from . import config
 from .views import main
 from .ext import db # migrate, seeder
 
@@ -9,7 +9,7 @@ from .ext import db # migrate, seeder
 def create_app():
 	app = Flask(__name__)
 
-	app.config["SQLALCHEMY_DATABASE_URI"] = config.DB_URI
+	app.config["SQLALCHEMY_DATABASE_URI"] = config.DB_URL
 	app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = config.SQLALCHEMY_TRACK_MODIFICATIONS
 	app.register_blueprint(main)
 

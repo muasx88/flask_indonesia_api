@@ -6,7 +6,7 @@ load_dotenv(find_dotenv())
 
 
 SQLALCHEMY_TRACK_MODIFICATIONS = False
-DB_URI = os.getenv("DB_URL")
+DB_URL = os.getenv("DB_URL")
 
 logging.basicConfig(
     filename=os.getenv("SERVICE_LOG", "server.log"),

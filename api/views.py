@@ -1,5 +1,4 @@
-from flask import Blueprint, jsonify, request
-from werkzeug.exceptions import HTTPException
+from flask import Blueprint, jsonify
 from .models import Province, City, District, Village
 
 main = Blueprint('/', __name__)
